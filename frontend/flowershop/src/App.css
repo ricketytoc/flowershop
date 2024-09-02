@@ -80,7 +80,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 0 2.5rem;
-  margin-top: 9rem;
+  margin-top: 2rem;
   margin-bottom: 9rem;
 }
 
@@ -175,4 +175,46 @@
   align-items: center;
   justify-content: space-evenly;
   margin-bottom: 3rem;
+}
+
+.flower-list-filter-btns {
+  margin-top: 9rem;
+  display: flex;
+  margin-left: 15vw;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.flower-list-filter-btns > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flower-list-filter-btns img {
+  max-width: 2.8rem;
+  max-height: 2.8rem;
+}
+
+.flower-list-filter-btns h4 {
+  font-family: "Nunito sans", sans-serif;
+  font-size: 1rem;
+  color: #c9c9c7;
+  font-weight: 700;
+}
+
+.flower-type-filter-btn {
+  padding: 0.5rem;
+  background-color: #e9e9e8;
+  border: none;
+  border-radius: 1.2rem;
+}
+
+.flower-type-filter-clear-btn {
+  background-color: transparent;
+  border: none;
+  text-decoration: underline;
+  font-family: "Nunito sans", sans-serif;
+  color: #525252;
+  font-weight: 600;
 }
