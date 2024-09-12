@@ -1,11 +1,11 @@
 import {useLoaderData, Link, useSearchParams} from "react-router-dom"
-import {getVans} from "../../api"
+import {getFlowers} from "../../api"
 import flowerIcon from "../assets/flower.svg"
 import moneyIcon from "../assets/money.svg"
 import beerIcon from "../assets/beer.svg"
 
 export function loader() {
-    return getVans()
+    return getFlowers()
 }
 
 function Flowers() {
@@ -19,8 +19,8 @@ function Flowers() {
         : flowers
 
     const flowerElements = displayedFlowers.map(flower => (
-        <div key={flower.id} className="flower-tile">
-            <Link to={flower.id}>
+        <div key={flower._id} className="flower-tile">
+            <Link to={flower._id}>
                 <img src={flower.imageUrl}/>
                 <div className="flower-info">
                     <h2>{flower.name}</h2>

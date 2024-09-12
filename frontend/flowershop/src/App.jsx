@@ -1,11 +1,11 @@
 import {RouterProvider, createBrowserRouter, createRoutesFromElements, Route, Link} from "react-router-dom"
 import Layout from "./components/Layout"
+import FavouritesLayout from "./components/FavouritesLayout"
 import Flowers, {loader as flowersLoader} from "./pages/Flowers"
-import Favourites from "./pages/Favourites"
+import Favourites, {loader as favouritesLoader} from "./pages/Favourites"
 import Profile from "./pages/Profile"
 import FlowerDetail, {loader as flowerDetailLoader} from "./pages/FlowerDetail"
 import './App.css'
-import "../server"
 
 const router = createBrowserRouter(createRoutesFromElements(
   <>
@@ -15,8 +15,14 @@ const router = createBrowserRouter(createRoutesFromElements(
         element={<Flowers/>} 
         loader={flowersLoader}
       />
-      <Route path="favourites" element={<Favourites/>}/>
       <Route path="profile" element={<Profile/>}/>
+    </Route>
+    <Route path="/favourites" element={<FavouritesLayout/>}>
+      <Route
+        index
+        element={<Favourites/>}
+        loader={favouritesLoader}
+      />
     </Route>
     <Route
       path="/:id"

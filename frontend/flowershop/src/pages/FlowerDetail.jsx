@@ -1,15 +1,19 @@
 import { Link, useLocation, useLoaderData} from "react-router-dom"
 import { useState } from "react"
-import { getVans } from "../../api"
+import { getFlowers, addToFavourites } from "../../api"
 import bookmarkIcon from "../assets/bookmark.svg"
 
 export function loader({ params }) {
-    return getVans(params.id)
+    return getFlowers(params.id)
 }
 
 export default function FlowerDetail() {
     const [count, setCount] = useState(1)
     const flower = useLoaderData()
+
+    async function handleAddToFavourites() {
+        await addToFavourites(flower._id)
+    }
 
     return (
         <div className="flower-detail-container">
@@ -39,7 +43,7 @@ export default function FlowerDetail() {
             
             <p className="flower-description">{flower.description}</p>
             <div className="flower-detail-flex-container-2">
-                <button className="add-to-favourites-btn">
+                <button className="add-to-favourites-btn" onClick={async () => await handleAddToFavourites()}>
                     <img src={bookmarkIcon} alt="Add to favourites button" />
                 </button>
                 <button className="add-to-cart-btn">

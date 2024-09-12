@@ -84,6 +84,79 @@
   margin-bottom: 9rem;
 }
 
+.favourite-list {
+  margin: 9rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.favourite-tile > img {
+  max-width: 10rem;
+  max-height: 10rem;
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 2;
+  border-radius: 1rem;
+}
+
+.favourite-tile .fav-info {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+  font-family: "Nunito sans", sans-serif;
+  margin-left: 2rem;
+}
+
+.favourite-tile .fav-info > h2 {
+  color: #606060;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0 auto;
+}
+
+.favourite-tile .fav-info > p {
+  color: #303030;
+  font-weight: bold;
+  font-size: 1.6rem;
+  margin-top: 0.5rem;
+}
+
+.favourite-tile button {
+  max-width: 3.4rem;
+  max-height: 3.4rem;
+}
+
+.favourite-tile button img {
+  max-width: 1.6rem;
+}
+
+.favourite-tile .fav-remove-btn {
+  grid-column: 3 / span 1;
+  grid-row: 1 / span 1;
+  background-color: transparent;
+  border: none;
+}
+
+.favourite-tile .fav-add-cart-btn {
+  grid-column: 3 / 3;
+  grid-row: 2 / 2;
+  border: none;
+  padding: 0.9rem;
+  border-radius: 1rem;
+}
+
+.favourite-tile {
+  display: grid;
+  grid-template-columns: 10rem 20rem 3.4rem;
+  grid-template-rows: auto auto;
+  margin-top: 1.2rem;
+}
+
+.favourite-tile-container > hr {
+  border: 0.1rem solid #F0F0F0;
+  margin-top: 1.2rem;
+  margin-bottom: 0;
+}
+
 .test-fav, .test-profile, .test-flower-detail {
   margin-top: 9rem;
 }

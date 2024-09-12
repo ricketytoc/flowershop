@@ -26,7 +26,7 @@ function Nav() {
                 }
             </NavLink>
             <NavLink
-                to="favourites"
+                to="/favourites"
             >
                 {({isActive}) => 
                     <img 
@@ -37,7 +37,7 @@ function Nav() {
                 }
             </NavLink>
             <NavLink
-                to="profile"
+                to="/profile"
             >
                 {({isActive}) => 
                     <img 
